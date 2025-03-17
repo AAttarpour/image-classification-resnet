@@ -58,8 +58,8 @@ _(Attach `training_curves.png` here)_
 
 
 ---
-
-## Repository Structure:
+```bash
+Repository Structure:
 
 ├── config.yml                                # Configuration file for training and inference  
 ├── train.py                                  # Script to train the ResNet model  
@@ -68,7 +68,7 @@ _(Attach `training_curves.png` here)_
 ├── utils.py                                  # Utility functions for cosine scheduler
 ├── README.md                                 # Documentation  
 ├── requirements.txt                          # requirements packages  
-
+```
 
 ## Installation  
 Clone the repository and install dependencies:  
