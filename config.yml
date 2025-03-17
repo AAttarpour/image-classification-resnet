@@ -1,0 +1,35 @@
+general:
+  experiment_name: 'newdata_moreaug_batch16'
+  batch_size: 64
+  main_input_img_size: 256
+  downsample_size: 64
+  data_dict_file: /data3/projects/ahmadreza/DeepTrace/patch_classification/data_dicts_combined.pickle
+  dataloader_sampler: 'default' #default or weighted
+  checkpoint_period: 1
+  max_epochs: 1000
+  warmup_epochs: 'default'
+  validation_interval: 1
+  early_stop_patience: 300
+  data_aug_prob: 0.7
+  cache_rate_train: 0
+  cache_rate_val: 0
+  GPU: '0'
+  model_state: 'untrained'
+  model_trained_path: '/'
+model: 
+  in_channels: 1
+  out_channels: 2
+  block: 'basic'
+  layers: [3, 4, 6, 3] # ResNet50
+  block_inplanes: [64, 128, 256, 512]
+loss:
+  name: 'ce'
+  ce_weights: 5
+optimizer:
+  name: "AdamW"
+  learning_rate: 0.0001
+  weight_decay: 0.005
+  gradient_clip: 3
+  scheduler_last_epoch: -1 # default is -1
+
+
