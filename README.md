@@ -78,3 +78,29 @@ cd image-classification-resnet
 pip install -r requirements.txt
 ```
 
+
+# Run the Training Script
+Run the following command to train the model:
+```bash
+python train.py --exp /path/to/experiments --cfg /path/to/config.yml
+```
+
+Main Inputs:
+--exp: Directory where the experiments will be saved.
+--cfg: Path to the configuration file (YAML format).
+Outputs:
+Trained model saved in the experiment directory.
+Training and validation curves saved in the output directory.
+The best model based on F1 score and weighted F1 score will be saved.
+
+# How to Run Inference
+Once the model is trained, you can run the inference script to classify patches and generate the associated metrics.
+```bash
+python inference_with_metrics.py --model_path /path/to/trained/model --config /path/to/config.yml --data_dicts /path/to/data_dicts.pickle --binarization_threshold 0.5
+```
+
+Outputs:
+Prints the image path, true label, and predicted label for each image in the test dataset.
+Prints the average Precision, Recall, and F1 score for the test dataset.
+
+
