@@ -49,7 +49,7 @@ Below are the **training loss and evaluation metric curves**:
 - 5x more weights for class 1 in BCE loss function
    
 📈 **Training Curves:**  
-_(Attach `training_curves.png` here)_  
+![Training Metrics Curves](assets/training_metrics_curves.png) 
 
 📊 **Performance on Test Set:**  
 | Metric     | Precision | Recall | F1 Score |  
